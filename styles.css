@@ -147,4 +147,17 @@ footer {
 .feedback-button:hover {
     background-color: #c0392b;
 }
+.bestel-knop {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.bestel-knop:hover {
+  background-color: #218838;
+}
+
        
