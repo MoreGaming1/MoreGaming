@@ -79,5 +79,23 @@
     </footer>
 
     <script src="script.js"></script>
+    <main>
+  <!-- andere content -->
+
+  <p>Verwachte bezorgdatum: <span id="delivery-date"></span></p>
+</main>
+
+<script>
+  function getDeliveryDate() {
+    const today = new Date();
+    const deliveryDate = new Date(today);
+    deliveryDate.setDate(today.getDate() + 7);
+
+    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+    return deliveryDate.toLocaleDateString('nl-NL', options);
+  }
+
+  document.getElementById('delivery-date').textContent = getDeliveryDate();
+</script>
 </body>
 </html>
