@@ -148,16 +148,18 @@ footer {
     background-color: #c0392b;
 }
 .bestel-knop {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #28a745;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff9800; /* Oranje */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
 }
 
 .bestel-knop:hover {
-  background-color: #218838;
+    background-color: #e68900;
 }
-
-       
+   
