@@ -1,177 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming Accessories</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Productpagina</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .product-detail {
+      max-width: 600px;
+      margin: 60px auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .product-detail img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .product-detail h2 {
+      color: #333;
+    }
+
+    .product-detail .price {
+      color: #e67e22;
+      font-size: 1.5rem;
+      margin: 10px 0;
+    }
+
+    .bestel-knop {
+      padding: 12px 24px;
+      background-color: #ff9800;
+      color: white;
+      border: none;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+
+    .bestel-knop:hover {
+      background-color: #e68900;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Fortnite Gaming Accessories</h1>
-    </header>
+  <div class="product-detail" id="product-info">
+    <!-- Hier komt de productinfo dynamisch -->
+  </div>
 
-    <main>
-        <div class="products">
-            <div class="product">
-                <p>Fortnite phone case - 4€</p>
-            </div>
-            <div class="product">
-                <p>gaming headset -10€ </p>
-            </div>
-            <div class="product">
-                <p>Fornite bottle - 10€</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-            <div class="product">
-                <p>? - ?</p>
-            </div>
-        </div>
-    </main>
+  <script>
+    const products = {
+      1: {
+        name: "Game Console X",
+        description: "De ultieme game-ervaring in 4K.",
+        price: "€399,00",
+        image: "img/console1.jpg"
+      },
+      2: {
+        name: "Wireless Controller Pro",
+        description: "Ergonomisch design met haptische feedback.",
+        price: "€59,99",
+        image: "img/controller1.jpg"
+      },
+      3: {
+        name: "Gaming Headset Ultra",
+        description: "Surround sound en ruisonderdrukking.",
+        price: "€89,95",
+        image: "img/headset1.jpg"
+      }
+    };
 
-    <footer>
-        <p>&copy; 2025 More Gaming. All rights reserved.</p>
-    </footer>
+    const urlParams = new URLSearchParams(window.location.search);
+    const productId = urlParams.get("id");
+    const product = products[productId];
+
+    if (product) {
+      document.getElementById("product-info").innerHTML = `
+        <img src="${product.image}" alt="${product.name}">
+        <h2>${product.name}</h2>
+        <p>${product.description}</p>
+        <p class="price">${product.price}</p>
+        <a href="order.html?product=${encodeURIComponent(product.name)}" class="bestel-knop">Bestel</a>
+      `;
+    } else {
+      document.getElementById("product-info").innerHTML = `<p>Product niet gevonden.</p>`;
+    }
+  </script>
 </body>
 </html>
-
