@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razer Gaming Keyboard - More Gaming</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Razer Gaming Keyboard</h1>
+    <a href="index.html">← Terug naar overzicht</a>
+  </header>
+  <main>
+    <img src="images/razer-gaming-keyboard.jpg" alt="Razer Gaming Keyboard" style="max-width:300px;">
+    <p>Prijs: <strong>€89,99</strong></p>
+    <p>Mechanisch toetsenbord met RGB-verlichting en supersnelle respons voor pro gamers.</p>
+    <p>Bezorgdatum: <span id="delivery-date"></span></p>
+    <a href="order.html" class="bestel-knop">Bestel nu</a>
+  </main>
+  <script>
+    const deliveryDate = new Date();
+    deliveryDate.setDate(deliveryDate.getDate() + 7);
+    document.getElementById('delivery-date').textContent =
+      deliveryDate.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  </script>
+</body>
+</html>

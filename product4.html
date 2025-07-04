@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fortnite Phone Case - More Gaming</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Fortnite Phone Case</h1>
+    <a href="index.html">← Terug naar overzicht</a>
+  </header>
+  <main>
+    <img src="images/fortnite-phone-case.jpg" alt="Fortnite Phone Case" style="max-width:300px;">
+    <p>Prijs: <strong>€8,99</strong></p>
+    <p>Stijlvolle en beschermende case voor je telefoon, met Fortnite design. Perfect cadeau!</p>
+    <p>Bezorgdatum: <span id="delivery-date"></span></p>
+    <a href="order.html" class="bestel-knop">Bestel nu</a>
+  </main>
+  <script>
+    const deliveryDate = new Date();
+    deliveryDate.setDate(deliveryDate.getDate() + 7);
+    document.getElementById('delivery-date').textContent =
+      deliveryDate.toLocaleDateString('nl-NL', { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+  </script>
+</body>
+</html>

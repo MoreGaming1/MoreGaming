@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logitech Gaming Mouse - More Gaming</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Logitech Gaming Mouse</h1>
+        <a href="index.html">← Terug naar overzicht</a>
+    </header>
+
+    <main>
+        <img src="images/logitech-gaming-mouse.jpg" alt="Logitech Gaming Mouse" style="max-width:300px;">
+        <p>Prijs: <strong>€19,99</strong></p>
+        <p>Snelle en nauwkeurige muis voor competitieve gamers. Geschikt voor PC en laptop.</p>
+        <p>Bezorgdatum: <span id="delivery-date"></span></p>
+        <a href="order.html" class="bestel-knop">Bestel nu</a>
+    </main>
+
+    <script>
+      const deliveryDate = new Date();
+      deliveryDate.setDate(deliveryDate.getDate() + 7);
+      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+      document.getElementById('delivery-date').textContent = deliveryDate.toLocaleDateString('nl-NL', options);
+    </script>
+</body>
+</html>
