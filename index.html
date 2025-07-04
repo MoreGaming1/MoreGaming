@@ -121,7 +121,21 @@
     <p>&copy; 2025 More Gaming. All rights reserved.</p>
   </footer>
 
-  <script>
+  <script>\
+    // Maak het hele product klikbaar
+document.querySelectorAll(".product").forEach(product => {
+  product.addEventListener("click", function (e) {
+    // Klik negeren als het op de bestelknop of ster was
+    if (
+      e.target.classList.contains("bestel-knop") ||
+      e.target.tagName === "SPAN"
+    ) {
+      return;
+    }
+    window.location.href = "producten.html";
+  });
+});
+
     // Bezorgdatum
     function getDeliveryDate() {
       const today = new Date();
