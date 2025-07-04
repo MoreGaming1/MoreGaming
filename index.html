@@ -1,153 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>More Gaming - Sale!</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>More Gaming - Sale!</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header met taalkeuze, zoekbalk, en feedback/inloggen knop -->
-    <header>
-        <div class="header-content"><div class="feedback-button-container">
-    <a href="feedback.html" class="feedback-button">Feedback</a>
-</div>
+  <header>
+    <div class="header-content">
+      <div class="feedback-button-container">
+        <a href="feedback.html" class="feedback-button">Feedback</a>
+      </div>
+      <div class="language-selector">
+        <select id="language" onchange="changeLanguage()">
+          <option value="en">English</option>
+          <option value="nl">Nederlands</option>
+        </select>
+      </div>
+      <div class="search-container">
+        <form action="index.html" method="get" class="search-form">
+          <input type="text" name="search" placeholder="Search for products..." class="search-input"/>
+          <button type="submit" class="search-button">Search</button>
+        </form>
+      </div>
+    </div>
+  </header>
 
-            <div class="language-selector">
-                <select id="language" onchange="changeLanguage()">
-                    <option value="en">English</option>
-                    <option value="nl">Nederlands</option>
-                </select>
-            </div>
+  <main>
+    <section class="product-section">
+      <h2>Our Popular Products</h2>
+      <div class="product-list">
 
-            <!-- Zoekbalk bovenaan de pagina -->
-            <div class="search-container">
-                <form action="index.html" method="get" class="search-form">
-                    <input type="text" name="search" placeholder="Search for products..." class="search-input">
-                    <button type="submit" class="search-button">Search</button>
-                </form>
-            </div>
+        <!-- Product 1 -->
+        <div class="product" data-product-id="fortnite-headset">
+          <a href="producten.html">
+            <img src="images/fortnite-headset.jpg" alt="Fortnite Gaming Headset" />
+            <p>Fortnite Gaming Headset</p>
+            <p>€15,59</p>
+            <p>Bezorgdatum: <span class="delivery-date"></span></p>
+          </a>
+          <a href="order.html" class="bestel-knop">Bestel</a>
+          <div class="star-rating">
+            <span data-star="1">&#9734;</span>
+            <span data-star="2">&#9734;</span>
+            <span data-star="3">&#9734;</span>
+            <span data-star="4">&#9734;</span>
+            <span data-star="5">&#9734;</span>
+          </div>
         </div>
-    </header>
 
-    <main>
-        <!-- Populaire Producten Sectie -->
-         <section class="product-section">
-            <h2>Our Popular Products</h2>
-            <div class="product-list">
-                <div class="product">
-                    <a href="producten.html" class="product">
-                    <img src="images/fortnite-headset.jpg" alt="Fortnite Gaming Headset">
-                    <p>Fortnite Gaming Headset</p>
-                    <p>€15,59</p>
-                    <p>Bezorgdatum: <span class="delivery-date"></span></p>
-                      <a href="order.html" class="bestel-knop">Bestel</a>
-                           <!-- Recensiesectie -->
-    <div class="review-section">
-        <h4>Schrijf een recensie:</h4>
-        <textarea class="review-input" placeholder="Wat vond je van dit product?"></textarea>
-        <button class="submit-review">Verstuur</button>
+        <!-- Product 2 -->
+        <div class="product" data-product-id="logitech-mouse">
+          <a href="producten.html">
+            <img src="images/logitech-gaming-mouse.jpg" alt="Logitech Gaming Mouse" />
+            <p>Logitech Gaming Mouse</p>
+            <p>€19,99</p>
+            <p>Bezorgdatum: <span class="delivery-date"></span></p>
+          </a>
+          <a href="order.html" class="bestel-knop">Bestel</a>
+          <div class="star-rating">
+            <span data-star="1">&#9734;</span>
+            <span data-star="2">&#9734;</span>
+            <span data-star="3">&#9734;</span>
+            <span data-star="4">&#9734;</span>
+            <span data-star="5">&#9734;</span>
+          </div>
+        </div>
 
-        <h4>Recensies:</h4>
-        <ul class="review-list"></ul>
-    </div>
-</div>
-                </div>
+        <!-- Product 3 -->
+        <div class="product" data-product-id="razer-keyboard">
+          <a href="producent.html">
+            <img src="images/razer-gaming-keyboard.jpg" alt="Razer Gaming Keyboard" />
+            <p>Razer Gaming Keyboard</p>
+            <p>€89,99</p>
+            <p>Bezorgdatum: <span class="delivery-date"></span></p>
+          </a>
+          <a href="order.html" class="bestel-knop">Bestel</a>
+          <div class="star-rating">
+            <span data-star="1">&#9734;</span>
+            <span data-star="2">&#9734;</span>
+            <span data-star="3">&#9734;</span>
+            <span data-star="4">&#9734;</span>
+            <span data-star="5">&#9734;</span>
+          </div>
+        </div>
 
-                <div class="product">
-                    <a href="producten.html" class="product">
-                    <img src="images/logitech-gaming-mouse.jpg" alt="Logitech Gaming Mouse">
-                    <p>Logitech Gaming Mouse</p>
-                    <p>€19,99</p>
-                    <p>Bezorgdatum: <span class="delivery-date"></span></p>
-                      <a href="order.html" class="bestel-knop">Bestel</a>
-                           <!-- Recensiesectie -->
-    <div class="review-section">
-        <h4>Schrijf een recensie:</h4>
-        <textarea class="review-input" placeholder="Wat vond je van dit product?"></textarea>
-        <button class="submit-review">Verstuur</button>
+        <!-- Product 4 -->
+        <div class="product" data-product-id="fortnite-case">
+          <a href="producten.html">
+            <img src="images/fortnite-phone-case.jpg" alt="Fortnite Phone Case" />
+            <p>Fortnite Phone Case</p>
+            <p>€8,99</p>
+            <p>Bezorgdatum: <span class="delivery-date"></span></p>
+          </a>
+          <a href="order.html" class="bestel-knop">Bestel</a>
+          <div class="star-rating">
+            <span data-star="1">&#9734;</span>
+            <span data-star="2">&#9734;</span>
+            <span data-star="3">&#9734;</span>
+            <span data-star="4">&#9734;</span>
+            <span data-star="5">&#9734;</span>
+          </div>
+        </div>
 
-        <h4>Recensies:</h4>
-        <ul class="review-list"></ul>
-    </div>
-</div>
-                </div>
+      </div>
+    </section>
 
-                <div class="product">
-                    <a href="producent.html" class="product">
-                    <img src="images/razer-gaming-keyboard.jpg" alt="Razer Gaming Keyboard">
-                    <p>Razer Gaming Keyboard</p>
-                    <p>€89,99</p>
-                    <p>Bezorgdatum: <span class="delivery-date"></span></p>
-                      <a href="order.html" class="bestel-knop">Bestel</a>
-                           <!-- Recensiesectie -->
-    <div class="review-section">
-        <h4>Schrijf een recensie:</h4>
-        <textarea class="review-input" placeholder="Wat vond je van dit product?"></textarea>
-        <button class="submit-review">Verstuur</button>
+    <section class="sale-section">
+      <h2>Sale! <span id="countdown"></span></h2>
+      <div class="product-list" id="sale-products">
+        <!-- Dynamische producten komen hier -->
+      </div>
+    </section>
 
-        <h4>Recensies:</h4>
-        <ul class="review-list"></ul>
-    </div>
-</div>
-                </div>
+    <p>Verwachte bezorgdatum: <span id="delivery-date"></span></p>
+  </main>
 
-                <div class="product">
-                    <a href="producten.html" class="product">
-                    <img src="images/fortnite-phone-case.jpg" alt="Fortnite Phone Case">
-                    <p>Fortnite Phone Case</p>
-                    <p>€8,99</p>
-                    <p>Bezorgdatum: <span class="delivery-date"></span></p>
-                      <a href="order.html" class="bestel-knop">Bestel</a>
-                           <!-- Recensiesectie -->
-    <div class="review-section">
-        <h4>Schrijf een recensie:</h4>
-        <textarea class="review-input" placeholder="Wat vond je van dit product?"></textarea>
-        <button class="submit-review">Verstuur</button>
+  <footer>
+    <p>&copy; 2025 More Gaming. All rights reserved.</p>
+  </footer>
 
-        <h4>Recensies:</h4>
-        <ul class="review-list"></ul>
-    </div>
-</div>
-                </div>
-            </div>
-        </section>
+  <script>
+    // Bezorgdatum
+    function getDeliveryDate() {
+      const today = new Date();
+      const deliveryDate = new Date(today);
+      deliveryDate.setDate(today.getDate() + 7);
 
-        <!-- Sale! Sectie met timer en producten -->
-        <section class="sale-section">
-            <h2>Sale! <span id="countdown"></span></h2>
-            <div class="product-list" id="sale-products">
-                <!-- Dynamische producten komen hier -->
-            </div>
-        </section>
-    </main>
+      const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
+      return deliveryDate.toLocaleDateString('nl-NL', options);
+    }
 
-    <footer>
-        <p>&copy; 2025 More Gaming. All rights reserved.</p>
-    </footer>
+    document.querySelectorAll(".delivery-date").forEach(el => {
+      el.textContent = getDeliveryDate();
+    });
 
-    <script src="script.js"></script>
-    <main>
-  <!-- andere content -->
+    // Sterrenbeoordeling
+    document.addEventListener("DOMContentLoaded", function () {
+      const products = document.querySelectorAll(".product");
 
-  <p>Verwachte bezorgdatum: <span id="delivery-date"></span></p>
-</main>
+      products.forEach(product => {
+        const productId = product.getAttribute("data-product-id");
+        const stars = product.querySelectorAll(".star-rating span");
 
-<script>
-  function getDeliveryDate() {
-    const today = new Date();
-    const deliveryDate = new Date(today);
-    deliveryDate.setDate(today.getDate() + 7);
+        let savedRating = localStorage.getItem(`rating-${productId}`);
+        if (savedRating) {
+          highlightStars(stars, parseInt(savedRating));
+        }
 
-    const options = { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' };
-    return deliveryDate.toLocaleDateString('nl-NL', options);
-  }
+        stars.forEach(star => {
+          star.addEventListener("click", () => {
+            const rating = parseInt(star.getAttribute("data-star"));
+            localStorage.setItem(`rating-${productId}`, rating);
+            highlightStars(stars, rating);
+          });
+        });
+      });
 
-  document.getElementById('delivery-date').textContent = getDeliveryDate();
-</script>
+      function highlightStars(stars, rating) {
+        stars.forEach(star => {
+          const value = parseInt(star.getAttribute("data-star"));
+          star.innerHTML = value <= rating ? "&#9733;" : "&#9734;";
+        });
+      }
+    });
+  </script>
 
+  <style>
+    .star-rating {
+      margin-top: 8px;
+    }
 
-</section>
-</div>
+    .star-rating span {
+      font-size: 24px;
+      cursor: pointer;
+      color: gold;
+      transition: transform 0.2s;
+    }
+
+    .star-rating span:hover {
+      transform: scale(1.2);
+    }
+
+    .product {
+      border: 1px solid #ddd;
+      padding: 16px;
+      margin: 10px;
+      border-radius: 8px;
+      text-align: center;
+    }
+  </style>
 </body>
 </html>
